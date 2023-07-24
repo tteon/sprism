@@ -52,9 +52,7 @@ st.set_page_config(
 )
 
 # Get the values of the environment variables
-# load_dotenv()
-#openai.api_key = st.secrets["openai_api_key"]
-openai.api_key = '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'
+openai.api_key = st.secrets["openai_api_key"]
 
 # empty report
 report = ' '
