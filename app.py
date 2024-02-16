@@ -20,7 +20,7 @@ import numpy as np
 import requests
 import re
 from bs4 import BeautifulSoup
-
+#from dotenv import load_dotenv
 
 # img_to_bytes and img_to_html inspired from https://pmbaumgartner.github.io/streamlitopedia/sizing-and-images.html
 import base64
@@ -58,12 +58,11 @@ st.set_page_config(
 
 # Get the values of the environment variables
 #openai.api_key = st.secrets["openai_api_key"]
+
 # if load_dotenv() == True:
 #     openai.api_key = os.environ.get('openai.api_key')
 # else:
 #     print('fail to load apikey')
-
-os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 client = OpenAI()
 
@@ -220,7 +219,7 @@ if authentication_status:
                     lowest_date = stock_data.loc[stock_data['Close'].idxmin()].name.date().strftime('%Y%m%d')
 
                     # Set custom colors and styling for the plot
-                    plt.style.use('seaborn')
+                    plt.style.use('seaborn-dark')
                     colors = ['#9836e3', '#ff7f0e', '#2ca02c']
                     plt.rcParams.update({
                         'axes.spines.right': False,
