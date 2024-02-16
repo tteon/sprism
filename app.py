@@ -219,7 +219,7 @@ if authentication_status:
                     lowest_date = stock_data.loc[stock_data['Close'].idxmin()].name.date().strftime('%Y%m%d')
 
                     # Set custom colors and styling for the plot
-                    plt.style.use('seaborn-dark')
+                    plt.style.use('dark_background')
                     colors = ['#9836e3', '#ff7f0e', '#2ca02c']
                     plt.rcParams.update({
                         'axes.spines.right': False,
