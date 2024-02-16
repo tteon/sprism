@@ -62,6 +62,9 @@ st.set_page_config(
 #     openai.api_key = os.environ.get('openai.api_key')
 # else:
 #     print('fail to load apikey')
+
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+
 client = OpenAI()
 
 # user profile
