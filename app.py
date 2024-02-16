@@ -20,7 +20,7 @@ import numpy as np
 import requests
 import re
 from bs4 import BeautifulSoup
-#from dotenv import load_dotenv
+
 
 # img_to_bytes and img_to_html inspired from https://pmbaumgartner.github.io/streamlitopedia/sizing-and-images.html
 import base64
